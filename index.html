@@ -27,334 +27,263 @@
         /* Header Section */
         .header {
             display: flex;
-            justify-content: space-between;
             margin-bottom: 30px;
         }
         
-        .header-left {
-            width: 70%;
+        .left-sidebar {
+            width: 30%;
+            padding: 20px;
+            background-color: #607D77;
+            color: #f5f5f5;
         }
         
-        .header-right {
-            width: 25%;
-            text-align: right;
+        .main-content {
+            width: 70%;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
         
         .name {
-            font-size: 36px;
-            font-weight: bold;
-            margin-bottom: 8px;
+            font-size: 42px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            color: #d4d4d4;
         }
         
         .title {
-            font-size: 18px;
-            color: #007bff;
-            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-transform: uppercase;
         }
         
         .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 15px;
-        }
-        
-        .contact-item {
-            margin-right: 20px;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
-        
-        /* Main Content */
-        .content {
-            display: flex;
-            gap: 30px;
-        }
-        
-        .left-column {
-            width: 60%;
-        }
-        
-        .right-column {
-            width: 40%;
-        }
-        
-        /* Section Styling */
-        .section {
             margin-bottom: 30px;
         }
         
+        .contact-item {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
         .section-title {
-            font-size: 20px;
-            font-weight: bold;
-            border-bottom: 2px solid #333;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-        }
-        
-        /* Experience Items */
-        .job {
-            margin-bottom: 25px;
-        }
-        
-        .job-title {
             font-size: 18px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 15px;
+            color: #ffffff;
+            text-transform: uppercase;
+            border-bottom: 1px solid #9eb3a9;
+            padding-bottom: 8px;
         }
         
-        .company {
-            font-size: 16px;
-            color: #007bff;
-            margin-bottom: 5px;
+        .main-section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #607D77;
+            text-transform: uppercase;
+            border-bottom: 1px solid #607D77;
+            padding-bottom: 8px;
         }
         
-        .date-location {
+        .competency-list {
+            list-style-type: none;
+            margin-bottom: 30px;
+        }
+        
+        .competency-list li {
+            margin-bottom: 10px;
             font-size: 14px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        
-        .company-desc {
-            font-style: italic;
-            color: #777;
-            margin-bottom: 10px;
-        }
-        
-        .job-duties {
+            position: relative;
             padding-left: 20px;
         }
         
-        .job-duties li {
-            margin-bottom: 8px;
-            font-size: 14px;
+        .competency-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #ffffff;
         }
         
         /* Education */
         .education-item {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         
         .degree {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
         }
         
         .school {
             font-size: 14px;
-            color: #007bff;
-            margin-bottom: 5px;
+            color: #4a90e2;
+            margin-bottom: 3px;
         }
         
         .edu-date {
-            font-size: 14px;
-            color: #666;
+            font-size: 12px;
+            color: #d4d4d4;
         }
         
         /* Summary */
         .summary-content {
             font-size: 14px;
             line-height: 1.7;
+            margin-bottom: 30px;
+            background-color: #83a095;
+            padding: 15px;
+            color: #fff;
         }
         
-        /* Achievements */
-        .achievement {
-            display: flex;
-            margin-bottom: 20px;
+        /* Experience */
+        .job {
+            margin-bottom: 25px;
         }
         
-        .achievement-icon {
-            flex-shrink: 0;
-            width: 30px;
-            margin-right: 10px;
-            color: #007bff;
+        .job-title {
             font-size: 16px;
-        }
-        
-        .achievement-title {
             font-weight: bold;
-            margin-bottom: 5px;
-            font-size: 16px;
+            margin-bottom: 3px;
         }
         
-        .achievement-desc {
+        .company {
+            font-size: 14px;
+            color: #4a90e2;
+            margin-bottom: 3px;
+        }
+        
+        .date-location {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .job-duties {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .job-duties li {
+            margin-bottom: 6px;
             font-size: 14px;
         }
         
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        
-        .skill {
-            background-color: #f8f9fa;
-            padding: 10px;
-            border-radius: 4px;
-            font-size: 14px;
-            text-align: center;
-            font-weight: bold;
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                padding: 0;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
         <div class="header">
-            <div class="header-left">
-                <div class="name">SHANE PILON</div>
-                <div class="title">Region VP @ Beacon Capital | Investment Strategy Leader</div>
+            <!-- Left Sidebar -->
+            <div class="left-sidebar">
+                <div class="name">Shane Pilon</div>
+                <div class="title">Executive Assistant & Management Professional</div>
+                
                 <div class="contact-info">
-                    <div class="contact-item">📱 2677882305</div>
-                    <div class="contact-item">📧 shanepilon@gmail.com</div>
-                    <div class="contact-item">🔗 linkedin.com/in/shane-pilon-14377b47/</div>
-                    <div class="contact-item">📍 Pipersville</div>
+                    <div class="contact-item">Phone: (267) 674-6368</div>
+                    <div class="contact-item">Email: shanepilon44@gmail.com</div>
+                    <div class="contact-item">Address: North Wales, PA</div>
+                </div>
+                
+                <div class="section-title">CORE COMPETENCIES</div>
+                <ul class="competency-list">
+                    <li>Time Management & Organization</li>
+                    <li>Effective Communication & Customer Service</li>
+                    <li>Scheduling & Calendar Management</li>
+                    <li>Office Administration</li>
+                    <li>Inventory Management</li>
+                    <li>Staff Coordination</li>
+                    <li>Team Leadership & Training</li>
+                    <li>Problem-Solving & Conflict Resolution</li>
+                </ul>
+                
+                <div class="section-title">EDUCATION</div>
+                
+                <div class="education-item">
+                    <div class="degree">Bachelor's International Studies</div>
+                    <div class="school">Penn State University</div>
+                    <div class="edu-date">🗓️ 01/2005 - 01/2007</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="degree">International Economics</div>
+                    <div class="school">The Berlin School of Economics and Law</div>
+                    <div class="edu-date">🗓️ 01/2004 - 01/2005</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="degree">Associates in Business</div>
+                    <div class="school">Hawaii Pacific University</div>
+                    <div class="edu-date">🗓️ 01/2002 - 01/2003</div>
+                </div>
+                
+                <div class="education-item">
+                    <div class="degree">German Language</div>
+                    <div class="school">Sprachschule Berlin-Charlottenburg</div>
+                    <div class="edu-date">🗓️ 01/2001 - 09/2001</div>
                 </div>
             </div>
-            <div class="header-right">
-                <!-- Profile image would go here -->
-            </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="content">
-            <!-- Left Column -->
-            <div class="left-column">
-                <div class="section">
-                    <div class="section-title">EXPERIENCE</div>
-                    
-                    <div class="job">
-                        <div class="job-title">Region Vice President</div>
-                        <div class="company">Beacon Capital Management, Inc.</div>
-                        <div class="date-location">🗓️ 10/2019 - Present | 📍 Pipersville, PA</div>
-                        <div class="company-desc">Company Description</div>
-                        <ul class="job-duties">
-                            <li>Spearheaded investment strategy that increased Envestnet portfolio by 4x within 2 years (15M to 65M)</li>
-                            <li>Led a team to secure $50 million in new investments through strategic client outreach</li>
-                            <li>Developed and implemented sales conversion strategies that improved close rates by 30%</li>
-                            <li>Designed comprehensive client onboarding framework that reduced conversion time</li>
-                            <li>Applied innovative marketing approaches using modern tools to enhance client communications</li>
-                            <li>Mentored junior advisors, resulting in significant improvement in team performance metrics</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-title">Videographer & Content Creator</div>
-                        <div class="company">Uvify, Inc.</div>
-                        <div class="date-location">🗓️ 03/2018 - 09/2019 | 📍 Seoul, South Korea</div>
-                        <div class="company-desc">Drone technology and racing company</div>
-                        <ul class="job-duties">
-                            <li>Created promotional videos and marketing content for high-performance racing drones</li>
-                            <li>Traveled with professional drone racing team to capture competitive events and training sessions</li>
-                            <li>Represented company at major technology exhibitions including CES and industry trade shows</li>
-                            <li>Developed compelling video narratives that highlighted product capabilities and technical innovations</li>
-                            <li>Operated professional drone equipment to capture dynamic aerial footage for marketing campaigns</li>
-                            <li>Managed video production workflow from concept development through editing and final delivery</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="job">
-                        <div class="job-title">Lecturer (instructor)</div>
-                        <div class="company">Myongji College</div>
-                        <div class="date-location">🗓️ 03/2010 - 02/2017 | 📍 Seoul, South Korea</div>
-                        <div class="company-desc">Company Description</div>
-                        <ul class="job-duties">
-                            <li>Designed and delivered comprehensive academic curriculum to diverse international students</li>
-                            <li>Created engaging teaching materials that increased student participation and learning outcomes</li>
-                            <li>Facilitated cultural exchange activities to enhance global perspectives</li>
-                            <li>Served as College Ambassador, representing the institution at international conferences</li>
-                            <li>Maintained strong professional relationships with faculty and administration</li>
-                        </ul>
-                    </div>
+            
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="main-section-title">PROFESSIONAL SUMMARY</div>
+                <div class="summary-content">
+                    I am the Region Vice President at Beacon Capital Management, Inc. for PA, MD and DC, a leading asset management firm. I have a diverse background spanning finance, creative media production, and education, having worked and studied internationally in Germany, South Korea, and Hawaii. I am passionate about delivering innovative and customized solutions to our clients, based on rigorous market research and analysis. My experience with AI applications for marketing and business process optimization, combined with my background in visual storytelling, provides unique perspectives on client communication and engagement strategies.
                 </div>
-
-                <div class="section">
-                    <div class="section-title">EDUCATION</div>
-                    
-                    <div class="education-item">
-                        <div class="degree">International Economics</div>
-                        <div class="school">The Berlin School of Economics and Law</div>
-                        <div class="edu-date">🗓️ 01/2004 - 01/2005</div>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="degree">Associates in Business</div>
-                        <div class="school">Hawaii Pacific University</div>
-                        <div class="edu-date">🗓️ 01/2002 - 01/2003</div>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="degree">Bachelor's International Studies</div>
-                        <div class="school">Penn State University</div>
-                        <div class="edu-date">🗓️ 01/2005 - 01/2007</div>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="degree">German Language</div>
-                        <div class="school">Sprachschule Berlin-Charlottenburg</div>
-                        <div class="edu-date">🗓️ 01/2001 - 09/2001</div>
-                    </div>
+                
+                <div class="main-section-title">WORK EXPERIENCE</div>
+                
+                <div class="job">
+                    <div class="job-title">Region Vice President</div>
+                    <div class="company">Beacon Capital Management, Inc.</div>
+                    <div class="date-location">🗓️ 10/2019 - Present | 📍 Pipersville, PA</div>
+                    <ul class="job-duties">
+                        <li>Spearheaded investment strategy that increased Envestnet portfolio by 4x within 2 years (15M to 65M)</li>
+                        <li>Led a team to secure $50 million in new investments through strategic client outreach</li>
+                        <li>Developed and implemented sales conversion strategies that improved close rates by 30%</li>
+                        <li>Designed comprehensive client onboarding framework that reduced conversion time</li>
+                        <li>Applied innovative marketing approaches using modern tools to enhance client communications</li>
+                    </ul>
                 </div>
-            </div>
-
-            <!-- Right Column -->
-            <div class="right-column">
-                <div class="section">
-                    <div class="section-title">SUMMARY</div>
-                    <div class="summary-content">
-                        I am the Region Vice President at Beacon Capital Management, Inc., a leading asset management firm. I have a diverse background spanning finance, creative media production, and education, having worked and studied internationally in Germany, South Korea, and Hawaii. I am passionate about delivering innovative and customized solutions to our clients, based on rigorous market research and analysis. My experience with AI applications for marketing and business process optimization, combined with my background in visual storytelling, provides unique perspectives on client communication and engagement strategies.
-                    </div>
+                
+                <div class="job">
+                    <div class="job-title">Videographer & Content Creator</div>
+                    <div class="company">Uvify, Inc.</div>
+                    <div class="date-location">🗓️ 10/2017 - 09/2019 | 📍 Seoul, South Korea</div>
+                    <ul class="job-duties">
+                        <li>Created promotional videos and marketing content for high-performance racing drones</li>
+                        <li>Traveled with professional drone racing team to capture competitive events and training sessions</li>
+                        <li>Represented company at major technology exhibitions including CES and industry trade shows</li>
+                        <li>Developed compelling video narratives that highlighted product capabilities and technical innovations</li>
+                        <li>Operated professional drone equipment to capture dynamic aerial footage for marketing campaigns</li>
+                        <li>Managed video production workflow from concept development through editing and final delivery</li>
+                    </ul>
                 </div>
-
-                <div class="section">
-                    <div class="section-title">KEY ACHIEVEMENTS</div>
-                    
-                    <div class="achievement">
-                        <div class="achievement-icon">💎</div>
-                        <div class="achievement-content">
-                            <div class="achievement-title">Client Portfolio Growth</div>
-                            <div class="achievement-desc">Increased Envestnet portfolio by 4x within 2 years. 15 to 65 million.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="achievement">
-                        <div class="achievement-icon">💎</div>
-                        <div class="achievement-content">
-                            <div class="achievement-title">Team Investment Success</div>
-                            <div class="achievement-desc">Led a team to secure $50 million in new investments.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="achievement">
-                        <div class="achievement-icon">💎</div>
-                        <div class="achievement-content">
-                            <div class="achievement-title">Technology Exhibition Representation</div>
-                            <div class="achievement-desc">Represented Uvify at major global tech events including CES, creating compelling visual content that showcased product innovation.</div>
-                        </div>
-                    </div>
-                    
-                    <div class="achievement">
-                        <div class="achievement-icon">💎</div>
-                        <div class="achievement-content">
-                            <div class="achievement-title">Sales Conversion Improvements</div>
-                            <div class="achievement-desc">Improved sales conversion rate by 30% through strategic initiatives.</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <div class="section-title">SKILLS</div>
-                    <div class="skills-grid">
-                        <div class="skill">Financial Sales</div>
-                        <div class="skill">Investment Strategies</div>
-                        <div class="skill">Market Research</div>
-                        <div class="skill">Public Speaking</div>
-                        <div class="skill">AI Applications</div>
-                        <div class="skill">Content Creation</div>
-                        <div class="skill">Visual Storytelling</div>
-                        <div class="skill">Microsoft Office</div>
-                    </div>
+                
+                <div class="job">
+                    <div class="job-title">Lecturer (instructor)</div>
+                    <div class="company">Myongji College</div>
+                    <div class="date-location">🗓️ 03/2010 - 02/2017 | 📍 Seoul, South Korea</div>
+                    <ul class="job-duties">
+                        <li>Designed and delivered comprehensive academic curriculum to diverse international students</li>
+                        <li>Created engaging teaching materials that increased student participation and learning outcomes</li>
+                        <li>Facilitated cultural exchange activities to enhance global perspectives</li>
+                        <li>Served as College Ambassador, representing the institution at international conferences</li>
+                        <li>Maintained strong professional relationships with faculty and administration</li>
+                    </ul>
                 </div>
             </div>
         </div>
